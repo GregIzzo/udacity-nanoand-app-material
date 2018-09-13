@@ -28,7 +28,7 @@
         <item name="colorAccent">@color/accent</item>
         <item name="cardViewStyle">@style/CardView</item>
         <item name="selectableItemBackground">@color/cardview_dark_background</item>
-
+        <item name="android:windowTranslucentStatus">true</item>
     <!--    <item name="textColor">@color/primary_text</item> -->
 
 

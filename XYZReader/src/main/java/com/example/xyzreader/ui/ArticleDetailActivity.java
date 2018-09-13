@@ -72,10 +72,10 @@ public class ArticleDetailActivity extends AppCompatActivity
                     mCursor.moveToPosition(position);
                 }
                 mSelectedItemId = mCursor.getLong(ArticleLoader.Query._ID);
-                updateUpButtonPosition();
+              ////  updateUpButtonPosition();
             }
         });
-
+/*
         mUpButtonContainer = findViewById(R.id.up_container);
 
         mUpButton = findViewById(R.id.action_up);
@@ -98,7 +98,7 @@ public class ArticleDetailActivity extends AppCompatActivity
                 }
             });
         }
-
+*/
         if (savedInstanceState == null) {
             if (getIntent() != null && getIntent().getData() != null) {
                 mStartId = ItemsContract.Items.getItemId(getIntent().getData());
@@ -138,19 +138,20 @@ public class ArticleDetailActivity extends AppCompatActivity
         mCursor = null;
         mPagerAdapter.notifyDataSetChanged();
     }
-
+/*
     public void onUpButtonFloorChanged(long itemId, ArticleDetailFragment fragment) {
         if (itemId == mSelectedItemId) {
             mSelectedItemUpButtonFloor = fragment.getUpButtonFloor();
             updateUpButtonPosition();
         }
     }
-
+*/
+/*
     private void updateUpButtonPosition() {
         int upButtonNormalBottom = mTopInset + mUpButton.getHeight();
         mUpButton.setTranslationY(Math.min(mSelectedItemUpButtonFloor - upButtonNormalBottom, 0));
     }
-
+*/
     private class MyPagerAdapter extends FragmentStatePagerAdapter {
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -159,11 +160,14 @@ public class ArticleDetailActivity extends AppCompatActivity
         @Override
         public void setPrimaryItem(ViewGroup container, int position, Object object) {
             super.setPrimaryItem(container, position, object);
+       /*
             ArticleDetailFragment fragment = (ArticleDetailFragment) object;
+
             if (fragment != null) {
                 mSelectedItemUpButtonFloor = fragment.getUpButtonFloor();
                 updateUpButtonPosition();
             }
+            */
         }
 
         @Override
